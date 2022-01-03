@@ -1,0 +1,16 @@
+.slider-wrapper {
+    max-width: 1633px;
+    margin: 0 auto;
+}
+
+.tns-nav {
+    display: none;
+}
+
+.tns-controls{
+    display: flex;
+    justify-content: space-between;
+    button {
+        margin: 0 0 20px 0;       
+    }
+}
