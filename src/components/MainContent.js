@@ -1,16 +1,24 @@
 import React from 'react'
 import { FaAngleDown, AiFillHome } from 'react-icons/fa';
 import '../css/MainContent.scss'
-import SongList from './SongList';
+import RecentlyPlayed from './RecentlyPlayed'
+import Categories from './Categories'
 import SongCard from './SongCard';
+import Cookies from 'js-cookie'
+import NewRelease from './NewRelease';
 
-
-const MainContent = ({ data }) => {
+const MainContent = ({ data, token}) => {
     const [dropDown, setDropDown] = React.useState(false);
+
+    const handleLogout = ()=>{
+        // remove cookie and get new token
+        Cookies.remove('spotifyAuthToken');
+        window.location.reload();
+    }
 
     // console.log(data.images[0].url);
     return (
-        <div className="main-content w-screen ml-16 md:m-0">
+        <div className="main-content w-screen ml-16 md:m-0 overflow-y-scroll">
             <div className='flex justify-between m-4'>
                 <div className='slider-arrow'></div>
                 <div className='avatar-wrapper flex bg-gray-200 items-center cursor-pointer'>
@@ -25,15 +33,14 @@ const MainContent = ({ data }) => {
                 {/*drop down  */}
                 {dropDown && <div class="origin-top-right absolute md:right-4 right-6 mt-12 md:mt-14 md:w-44 w-36  right-8 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                     <div class="py-1" role="none">
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Logout</a>
+                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" onClick={handleLogout}>Logout</a>
                     </div>
                 </div>}
             </div>
             <div className='ml-5 mb-7'>
-                <p className="font-bold text-2xl mb-6">Recently played</p>
-                <SongCard />
+                <RecentlyPlayed token={token} />
             </div>
-            <SongList />
+            <NewRelease token={token} />
         </div>
     )
 }

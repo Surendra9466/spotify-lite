@@ -16,7 +16,7 @@ const Auth = () => {
                 <SpotifyAuth className="auth"
                     redirectUri='http://localhost:3000'
                     clientID='761c538089074f8d806178d2045e7d21'
-                    scopes={[Scopes.userReadPrivate, 'user-read-email']} // either style will work
+                    scopes={[Scopes.userReadPrivate, 'user-read-email', 'user-read-recently-played']} // either style will work
                     onAccessToken={(token) => setToken(token)}   
                 />
             )

@@ -8,6 +8,7 @@ import '../css/Home.scss';
 const url = '/me';
 const Home = ({ token }) => {
     const { loading, data } = useFetch(url, token);
+    const [flag, setFlag] = React.useState(false);
 
     if (loading) return <h1>Loading</h1>
 
@@ -15,7 +16,7 @@ const Home = ({ token }) => {
         <div className='home h-screen'>
             <div className='upper-section flex h-89 w-screen'>
                 <Sidebar />
-                <MainContent data={data}/>
+                <MainContent data={data} token={token} />
             </div>
             <PlayerSection />
         </div >

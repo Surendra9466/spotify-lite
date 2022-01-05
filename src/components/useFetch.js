@@ -4,7 +4,6 @@ import axios from 'axios';
 const useFetch = (url, token) => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState(null)
-    console.log(token + "hi");
     const headers = {
         'Authorization': `Bearer ${token}`
     }
@@ -18,7 +17,6 @@ const useFetch = (url, token) => {
                 setLoading(false);
             })
     }
-    console.log(data);
     useEffect(() => {
         fetchApi();
     }, []);
