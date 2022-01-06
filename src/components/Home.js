@@ -1,5 +1,4 @@
 import React from 'react'
-import Auth from './Auth'
 import Sidebar from './Sidebar'
 import MainContent from './MainContent'
 import PlayerSection from './PlayerSection'
@@ -8,7 +7,6 @@ import '../css/Home.scss';
 const url = '/me';
 const Home = ({ token }) => {
     const { loading, data } = useFetch(url, token);
-    const [flag, setFlag] = React.useState(false);
 
     if (loading) return <h1>Loading</h1>
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function SongCard({image, title, album}) {
     const handleClick = ()=>{
+        console.log(album);
         sessionStorage.setItem('img', 'https://source.unsplash.com/user/c_v_r/100x100');
     }
     return (
