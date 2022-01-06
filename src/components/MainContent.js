@@ -1,9 +1,7 @@
 import React from 'react'
-import { FaAngleDown, AiFillHome } from 'react-icons/fa';
+import { FaAngleDown} from 'react-icons/fa';
 import '../css/MainContent.scss'
 import RecentlyPlayed from './RecentlyPlayed'
-import Categories from './Categories'
-import SongCard from './SongCard';
 import Cookies from 'js-cookie'
 import NewRelease from './NewRelease';
 
@@ -33,7 +31,7 @@ const MainContent = ({ data, token}) => {
                 {/*drop down  */}
                 {dropDown && <div class="origin-top-right absolute md:right-4 right-6 mt-12 md:mt-14 md:w-44 w-36  right-8 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                     <div class="py-1" role="none">
-                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" onClick={handleLogout}>Logout</a>
+                        <div class="text-gray-700 block px-4 py-2 text-sm" onClick={handleLogout}>Logout</div>
                     </div>
                 </div>}
             </div>

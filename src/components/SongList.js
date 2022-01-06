@@ -1,9 +1,7 @@
 import React from "react";
 import SongCard from "./SongCard";
-import { useEffect } from 'react';
 import '../css/SongList.scss';
-import { Carousel, rightArrow } from '@trendyol-js/react-carousel';
-import useFetch from './useFetch'
+import { Carousel } from '@trendyol-js/react-carousel';
 
 export default function SongList({ loading, heading, data}) {
 

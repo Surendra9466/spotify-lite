@@ -17,7 +17,7 @@ const PlayerSection = () => {
     return (
         <div className='player-wrapper flex items-center justify-between px-9'>
             <div className='song-info flex items-center  h-full '>
-                <div className='cover-img '><img className='rounded' src="https://source.unsplash.com/user/c_v_r/75x75" /></div>
+                <div className='cover-img '><img className='rounded' src="https://source.unsplash.com/user/c_v_r/75x75" alt='cover-img' /></div>
                 <div className='song-artist-info ml-4'>
                     <div className='song-name pb-1'>Im My Feelings</div>
                     <div className='artist-name'>Drake</div>
