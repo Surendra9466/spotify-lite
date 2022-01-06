@@ -18,7 +18,7 @@ const MainContent = ({ data, token}) => {
 
     // console.log(data.images[0].url);
     return (
-        <div className="main-content w-screen ml-16 md:m-0 overflow-y-scroll">
+        <div className="main-content w-screen ml-0 md:ml-16 overflow-y-scroll">
             <div className='flex justify-between m-4'>
                 <div className='slider-arrow'></div>
                 <div className='avatar-wrapper flex bg-gray-200 items-center cursor-pointer'>
@@ -37,7 +37,7 @@ const MainContent = ({ data, token}) => {
                     </div>
                 </div>}
             </div>
-            <div className='ml-5 mb-7'>
+            <div className='mb-7'>
                 <RecentlyPlayed token={token} />
             </div>
             <NewRelease token={token} />

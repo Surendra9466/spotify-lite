@@ -15,7 +15,7 @@ export default function SongList({ loading, heading, data}) {
                 <p className="font-bold text-2xl mb-6">{heading}</p>
             </div>
 
-            {!loading ? (<Carousel show={8} useArrowKeys={true} slide={1} swiping={true}>
+            {!loading ? (<Carousel show={8} slide={2} swiping={true}>
                 {data.map((item, index) => {
                     const  {album, image, title} = item;
                     console.log();
