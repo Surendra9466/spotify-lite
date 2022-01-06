@@ -11,7 +11,6 @@ export default function SongCard({image, title, album}) {
                 <div className='cursor-pointer'>
                     <img className='h-32 rounded-md bg-black shadow-lg hover:opacity-50 transition-opacity duration-500 ease-out'
                         src={image} alt='album cover'
-                        alt="img"
                     />
                 </div>
                 <div>
